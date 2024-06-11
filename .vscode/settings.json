@@ -1,0 +1,44 @@
+{
+  "cSpell.words": [
+    "brotli",
+    "datetime",
+    "echarts",
+    "fieldname",
+    "gifsicle",
+    "moduler",
+    "mozjpeg",
+    "optipng",
+    "pinia",
+    "pngquant",
+    "secondarycontainer",
+    "tanstack",
+    "tdesign",
+    "unplugin",
+    "vueuse"
+  ],
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "html": "HTML",
+    "javascript": "javascript",
+    "javascriptreact": "javascriptreact",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "prisma.schemaPath": "",
+  "prisma.scriptRunner": "pnpm"
+}

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Poppins";
+    src: url(./Fonts/Poppins-Regular.ttf);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  img {
+    width: 100%;
+  }
+  .section {
+    @apply container mx-auto overflow-hidden px-4 pt-[8rem] lg:px-8;
+  }
+  .btn {
+    @apply btn_pin_fast flex items-center gap-4 rounded-t-[1rem] rounded-bl-[1rem] bg-black p-4 text-[0.85rem] text-white;
+  }
+  .btn_pin {
+    @apply transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110;
+  }
+  .btn_pin_fast {
+    @apply transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110;
+  }
+}

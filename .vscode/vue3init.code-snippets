@@ -1,0 +1,18 @@
+{
+  "vue3 template": {
+    "prefix": "v3ts",
+    "body": [
+      "<script setup lang=\"ts\">",
+      //"import { ref, reactive } from \"vue\" ",
+      "$2",
+      "</script>\n",
+      "<template>",
+      "$1",
+      "</template>\n",
+      "<style scoped>",
+      "$3",
+      "</style>"
+    ],
+    "description": "vue3 template"
+  }
+}
