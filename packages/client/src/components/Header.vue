@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { AiOutlineMenu } from 'vue3-icons/ai';
+import { useRoute } from 'vue-router';
+
+// 判断当前路由并匹配高亮
+const route = useRoute();
+const isActive = (path: string) => {
+  return route.path === path;
+};
 
 const isClick = ref(true);
 const menuClass = ref('opacity-100');
@@ -45,16 +52,22 @@ const hiddenMenu = () => {
       <div :class="isClick ? 'hidden' : menuClass" class="w-full md:flex md:w-auto md:items-center" id="menu">
         <ul class="pt-4 text-base text-gray-700 md:flex md:items-start md:justify-between md:pt-0">
           <li>
-            <RouterLink to="/" class="block py-2 hover:font-semibold md:p-4"> 首页 </RouterLink>
+            <RouterLink to="/" class="block py-2 md:p-4" :class="{ 'font-semibold': isActive('/') }"> 首页 </RouterLink>
           </li>
           <li>
-            <RouterLink to="/news" class="block py-2 hover:font-semibold md:p-4"> 动态 </RouterLink>
+            <RouterLink to="/news" class="block py-2 md:p-4" :class="{ 'font-semibold': isActive('/news') }">
+              动态
+            </RouterLink>
           </li>
           <li>
-            <RouterLink to="/order" class="block py-2 hover:font-semibold md:p-4"> 决定选单 </RouterLink>
+            <RouterLink to="/order" class="block py-2 md:p-4" :class="{ 'font-semibold': isActive('/order') }">
+              决定选单
+            </RouterLink>
           </li>
           <li>
-            <RouterLink to="/contact" class="block py-2 hover:font-semibold md:p-4">联系我们</RouterLink>
+            <RouterLink to="/contact" class="block py-2 md:p-4" :class="{ 'font-semibold': isActive('/contact') }">
+              联系我们
+            </RouterLink>
           </li>
         </ul>
       </div>
